@@ -13,4 +13,5 @@ Clique nos links abaixo para acessar os arquivos de cada semana:
 
 *  [Semana 01 - Funcamentos e Ética](./semana-01)
 *  [Semana 02 - Proposta de Intervenção](./semana-02)
+*  [Semana 06 - Engenharia de Requisitos](./semana-06)
 ---
