@@ -1,0 +1,35 @@
+# Histórias de Usuário - Método C.A.R.D
+
+**Integrantes:** Ana Carolina, Ana Clara, Bianca e Emily
+
+**Breve descrição do software solicitado pelo cliente:** Sistema de base de dados colaborativa focado em referências musicais cruzadas entre obras de cinema/audiovisual e músicas de referência (clássicas, populares, etc.).
+
+---
+
+## Usuários
+
+| Tipo | Descrição |
+|------|-----------|
+| **Especialista** | Profissional com conhecimento técnico em música e trilhas sonoras. Identifica e cadastra referências cruzadas, aplica tags detalhadas e participa da validação crítica das conexões musicais. |
+| **Usuário comum** (incluindo críticos) | Usuário geral interessado em cinema e música. Navega pelas trilhas sonoras, encontra referências e acessa facilmente os trechos musicais sem necessidade de conhecimento técnico. |
+
+---
+
+## Especialista
+
+| Papel | História |
+|-------|----------|
+| **Especialista** | Como especialista, eu preciso **cadastrar uma Referência Cruzada** (conectando um Trecho Musical de Filme a um Trecho Musical de Referência) para que a comunidade possa analisar, debater e validar a conexão musical proposta. |
+| **Especialista** | Como especialista, eu desejo **adicionar tags detalhadas** (como Instrumentação, Motivo Temático, Período Clássico, etc.) ao registrar uma Referência Cruzada, permitindo que outros usuários possam filtrar o conteúdo com maior precisão técnica e acadêmica. |
+| **Pesquisador** | Como pesquisador, eu preciso **filtrar as referências por Status de Validação** ("Validada" ou "Em Discussão"), de forma a focar minha pesquisa apenas nas conexões que já possuem maior aceitação e consenso da comunidade especializada. |
+
+---
+
+## Usuário Comum
+
+| Papel | História |
+|-------|----------|
+| **Crítico** | Como crítico, eu quero **votar e justificar** minha concordância ou discordância em uma Referência Cruzada já existente, garantindo que a base de dados mantenha um alto nível de credibilidade e rigor na análise intertextual. |
+| **Fã** | Como fã, eu quero **encontrar as referências e inspirações musicais** da trilha sonora da obra que estou assistindo, para que eu possa aprofundar meu entendimento e apreciação sobre a intertextualidade musical no cinema. |
+| **Usuário** | Como usuário, eu gostaria de **acessar todas as músicas de um filme/série** com mais facilidade, eliminando a necessidade de realizar pesquisas extensas em múltiplas plataformas. |
+| **Fã** | Como fã, eu desejo **clicar no link de uma Referência Válida**, para ser levado diretamente ao trecho musical correspondente (no Spotify, YouTube ou outra plataforma), permitindo a comparação imediata do trecho do filme com a inspiração original. |
