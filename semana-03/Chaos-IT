@@ -1,0 +1,116 @@
+# Chaos-IT — Consultoria de Engenharia de Software
+
+> **Projeto:** IA Subaquática | **Metodologia:** Modelo Espiral de Boehm | **Diagnóstico:** CMMI
+
+---
+
+## Parte 1 — O Labirinto de Boehm: Por que o Modelo Espiral?
+
+### Por que a análise de riscos teria evitado a queda dos drones?
+
+O projeto de drones falhou porque os riscos técnicos foram ignorados ao longo do desenvolvimento. No Modelo Espiral de Boehm (Sommerville, Cap. 2), **cada volta da espiral obriga a equipe a identificar, analisar e mitigar riscos antes de avançar** para a próxima fase. Isso cria uma barreira explícita: nenhum incremento é construído sem que os principais riscos tenham sido tratados.
+
+No caso dos drones, uma análise de riscos na primeira volta teria levantado questões críticas como:
+
+| Risco identificado | O que teria sido feito |
+|---|---|
+| Falha de comunicação em voo | Protótipo de sistema de fallback antes de qualquer implementação |
+| Erro de navegação em obstáculos | Simulações em ambiente controlado na fase de prototipação |
+| Ausência de redundância de hardware | Requisito de redundância definido antes do início do desenvolvimento |
+| Testes insuficientes em condições reais | Ciclos iterativos com validação progressiva em campo |
+
+Ao contrário de modelos lineares como o Cascata, o Espiral não avança quando há risco não resolvido, ele itera. Os drones caíram porque ninguém parou para perguntar *"o que pode dar errado aqui?"* de forma sistemática.
+
+---
+
+### Diagrama: Um Ciclo da Espiral para o Projeto de IA Subaquática
+
+```
+                         PLANEJAMENTO
+                    ┌────────────────────┐
+                    │  • Definir escopo  │
+         ↗          │    do incremento   │          ↘
+                    │  • Levantar req.   │
+                    │    do sistema de   │
+  AVALIAÇÃO         │    sensores subaq. │         ANÁLISE DE RISCOS
+  DO CLIENTE        └────────────────────┘
+                                                   • Risco: falha de
+  • Revisão do       DESENVOLVIMENTO               comunicação subaquática
+    protótipo          E VALIDAÇÃO                 • Risco: corrosão de
+  • Feedback de     ┌────────────────────┐           hardware em água
+    especialistas   │  • Implementar     │         • Risco: latência da IA
+  • Decisão:        │    módulo de IA    │           em tempo real
+    continuar ou    │  • Testes em       │         • Mitigação: prototipação
+    revisar         │    ambiente sim.   │           de protocolo acústico
+         ↖          │  • Integração com  │          ↙
+                    │    sensores        │
+                    └────────────────────┘
+```
+
+#### Detalhamento dos Quadrantes para IA Subaquática
+
+| Quadrante | Atividades no Projeto |
+|---|---|
+| **Q1 — Planejamento** | Definir objetivos do ciclo atual (ex: módulo de visão computacional subaquática). Identificar restrições de hardware aquático. Levantar requisitos com especialistas em oceanografia. |
+| **Q2 — Análise de Riscos** | Avaliar riscos de comunicação em profundidade (sinal acústico vs RF). Prototipar soluções para os riscos críticos antes de codificar. Definir critério de "risco aceitável" para prosseguir. |
+| **Q3 — Desenvolvimento e Validação** | Implementar o incremento planejado. Executar testes em ambiente simulado (tanque). Validar comportamento da IA com dados reais de sensores. |
+| **Q4 — Avaliação do Cliente** | Demonstrar o incremento para a equipe e stakeholders. Coletar feedback. Decidir se os riscos residuais permitem avançar à próxima volta da espiral. |
+
+#### Por que o Espiral é o único modelo adequado aqui?
+
+O projeto de IA subaquática envolve **incerteza tecnológica alta** (IA em ambientes hostis), **requisitos evolutivos** (comportamento em diferentes profundidades e condições) e **custo de falha elevado** (hardware subaquático é caro de recuperar). O Modelo Espiral é o único que trata explicitamente esses três fatores em cada ciclo, enquanto modelos ágeis carecem de documentação formal de riscos e o modelo Cascata não permite correções de rota após comprometimento com os requisitos iniciais.
+
+---
+
+## Parte 2 — Diagnóstico CMMI da Chaos-IT
+
+### Nível atual: CMMI Nível 1 — Inicial (Caótico)
+
+Com base na descrição fornecida, a Chaos-IT se enquadra no **Nível 1 — Inicial** do CMMI. As evidências são diretas:
+
+| Característica do Nível 1 | Evidência na Chaos-IT |
+|---|---|
+| Processos imprevisíveis e reativos | *"cada desenvolvedor trabalha do seu jeito"* |
+| Sem repositório de lições aprendidas | *"não há registro de erros passados"* |
+| Estimativas sem base histórica | *"prazos são 'chutados'"* |
+| Sucesso dependente de pessoas, não de processos | *"esforço heróico de alguns devs"* |
+
+No Nível 1, o sucesso de um projeto depende da competência individual dos desenvolvedores. Quando esses profissionais saem da empresa ou ficam indisponíveis, o projeto fracassa, exatamente o padrão observado na queda do sistema de drones.
+
+---
+
+### O que falta para alcançar o Nível 2 — Gerenciado?
+
+O **Nível 2 — Gerenciado** exige que os projetos sejam planejados, monitorados e controlados. As áreas de processo que a Chaos-IT precisa implementar são:
+
+| Área de Processo (PA) | O que implementar na prática |
+|---|---|
+| **Gerenciamento de Requisitos** | Documentar e versionar todos os requisitos; rastrear mudanças formalmente |
+| **Planejamento de Projeto** | Estimativas baseadas em dados históricos (mesmo que simples); cronogramas com marcos definidos |
+| **Monitoramento e Controle** | Reuniões periódicas de acompanhamento; comparar progresso real vs planejado |
+| **Gerenciamento de Configuração** | Controle de versão obrigatório (Git); baseline de cada entrega |
+| **Garantia da Qualidade** | Revisões de código e testes mínimos padronizados para todos os projetos |
+| **Gestão de Acordos com Fornecedores** | Contratos e critérios de aceite formalizados |
+
+#### Plano de melhoria imediato (próximos 90 dias)
+
+```
+Mês 1 — Visibilidade
+  ├── Adotar Git obrigatório em todos os projetos
+  ├── Criar template de planejamento de projeto (escopo, prazo, responsáveis)
+  └── Iniciar registro de erros e decisões técnicas por projeto
+
+Mês 2 — Controle
+  ├── Implementar reuniões semanais de status (15 min)
+  ├── Definir critérios mínimos de "pronto" (DoD) para entregas
+  └── Coletar dados de esforço real vs estimado
+
+Mês 3 — Institucionalização
+  ├── Criar base de dados de estimativas históricas
+  ├── Formalizar processo mínimo de revisão de código
+  └── Realizar primeira retrospectiva formal de projeto
+```
+
+> **Referência:** Sommerville, I. *Engenharia de Software*, Cap. 2 — Processos de Software e o Modelo Espiral de Boehm. A progressão CMMI do Nível 1 para o Nível 2 não exige perfeição, exige **repetibilidade**: que os projetos sigam um processo documentado, mesmo que simples, em vez de depender do heroísmo individual.
+
+---
